@@ -1,4 +1,7 @@
 
+[.homesick/repos/citadel]
+checkout = git clone 'git@github.com:feynmanliang/citadel.git' 'citadel'
+
 [.homesick/repos/vim-castle]
 checkout = git clone 'git@github.com:feynmanliang/vim-castle.git' 'vim-castle'
 
