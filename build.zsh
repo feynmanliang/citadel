@@ -12,3 +12,5 @@ homeshick link
 homeshick link
 
 vim -c "VundleInstall"
+
+print "Built citadel and castles undr ~/.homesick/repos. It is now OK to remove this directory"
