@@ -1,0 +1,9 @@
+
+[.homesick/repos/vim-castle]
+checkout = git clone 'git@github.com:feynmanliang/vim-castle.git' 'vim-castle'
+
+[.homesick/repos/tmux-castle]
+checkout = git clone 'git@github.com:feynmanliang/tmux-castle.git' 'tmux-castle'
+
+[.homesick/repos/zsh-castle]
+checkout = git clone 'git@github.com:feynmanliang/zsh-castle.git' 'zsh-castle'
