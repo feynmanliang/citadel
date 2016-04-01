@@ -1,6 +1,0 @@
-[submodule "myrepos"]
-	path = myrepos
-	url = https://github.com/joeyh/myrepos
-[submodule "homeshick"]
-	path = homeshick
-	url = https://github.com/andsens/homeshick

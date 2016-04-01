@@ -13,3 +13,18 @@ checkout = git clone 'git@github.com:feynmanliang/zsh-castle.git' 'zsh-castle'
 
 [.homesick/repos/urxvt-X11-castle]
 checkout = git clone 'git@github.com:feynmanliang/urxvt-X11-castle.git' 'urxvt-X11-castle'
+
+[.homesick/repos/desktop-castle]
+checkout = git clone 'git@github.com:feynmanliang/desktop-castle.git' 'desktop-castle'
+
+[.homesick/repos/git-castle]
+checkout = git clone 'git@github.com:feynmanliang/git-castle.git' 'git-castle'
+
+[.homesick/repos/homeshick]
+checkout = git clone 'git://github.com/andsens/homeshick.git' 'homeshick'
+
+[.homesick/repos/other-castle]
+checkout = git clone 'git@github.com:feynmanliang/other-castle.git' 'other-castle'
+
+[.homesick/repos/secret-castle]
+checkout = git clone 'git@github.com:feynmanliang/secret-castle.git' 'secret-castle'
