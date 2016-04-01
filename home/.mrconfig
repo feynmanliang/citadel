@@ -8,12 +8,6 @@ checkout = git clone 'git@github.com:feynmanliang/desktop-castle.git' 'desktop-c
 [.homesick/repos/git-castle]
 checkout = git clone 'git@github.com:feynmanliang/git-castle.git' 'git-castle'
 
-[.homesick/repos/homeshick]
-checkout = git clone 'git@github.com:andsens/homeshick.git' 'homeshick'
-
-[.homesick/repos/myrepos]
-checkout = git clone 'git@github.com:joeyh/myrepos.git' 'myrepos'
-
 [.homesick/repos/other-castle]
 checkout = git clone 'git@github.com:feynmanliang/other-castle.git' 'other-castle'
 
