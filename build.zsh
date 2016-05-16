@@ -15,9 +15,9 @@ homeshick link
 
 # install vim plugins
 print "Installing Vundle and plugins"
-cd $HOME ~/.homesick/repos/vim-castle/
-git submodule init
-git submodule update --recursive
+cd $HOME
+$HOME/.homesick/repos/myrepos/mr run git submodule init
+$HOME/.homesick/repos/myrepos/mr run git submodule update --recursive
 vim -c "VundleInstall"
 
 # compile YouCompleteMe vim plugin (requires build-essential, cmake, python-dev, python3-dev)
