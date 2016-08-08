@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 # builds the citadel and castles
 git clone git@github.com:andsens/homeshick $HOME/.homesick/repos/homeshick
