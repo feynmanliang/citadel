@@ -21,14 +21,26 @@ print "Symlinking dotfiles to ${HOME}"
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 homeshick link
 
-# install vim plugins
-print "Installing Vundle and plugins"
-vim -c "VundleInstall"
+# setup Neovim python venvs
+pyenv install 2.7.11
+pyenv install 3.4.4
+pyenv virtualenv 2.7.11 neovim2
+pyenv virtualenv 3.4.4 neovim3
+pyenv activate neovim2
+pip install neovim
+pyenv which python  # Note the path
+pyenv activate neovim3
+pip install neovim
+pyenv which python  # Note the path
+pip install flake8
+ln -s `pyenv which flake8` ~/bin/flake8  # Assumes that $HOME/bin is in $PATH
 
-# compile YouCompleteMe vim plugin (requires build-essential, cmake, python-dev, python3-dev)
-print "Compiling YouCompleteMe"
-cd $HOME/.vim/bundle/YouCompleteMe/
-./install.py --clang-completer --tern-completer # requires nodejs, npm
+# install vim plugins
+print "Installing plug.vim"
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+print "Installing vim plugins"
+vim -c "PlugInstall"
 
 # set private key permissions
 chmod 0600 $HOME/.ssh/id_rsa
