@@ -2,7 +2,7 @@
 
 # builds the citadel and castles
 git clone git@github.com:andsens/homeshick $HOME/.homesick/repos/homeshick
-git clone git@github.com:joeyh/myrepos $HOME/.homesick/repos/myrepos
+git clone https://git.joeyh.name/git/myrepos.git/ $HOME/.homesick/repos/myrepos
 git clone git@github.com:feynmanliang/citadel  $HOME/.homesick/repos/citadel
 
 print "Checking out kingdom to ~/.homesick/repos/"
