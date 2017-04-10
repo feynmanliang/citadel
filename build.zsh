@@ -1,11 +1,13 @@
 #!/usr/bin/env zsh
 
 # builds the citadel and castles
-git clone git@github.com:andsens/homeshick $HOME/.homesick/repos/homeshick
+git clone https://github.com/andsens/homeshick $HOME/.homesick/repos/homeshick
 git clone https://git.joeyh.name/git/myrepos.git/ $HOME/.homesick/repos/myrepos
-git clone git@github.com:feynmanliang/citadel  $HOME/.homesick/repos/citadel
+git clone https://github.com/feynmanliang/citadel  $HOME/.homesick/repos/citadel
 
 print "Checking out kingdom to ~/.homesick/repos/"
+source $HOME/.homesick/repos/homeshick/homeshick.sh
+homeshick link
 cd $HOME
 $HOME/.homesick/repos/myrepos/mr checkout
 
@@ -18,7 +20,6 @@ git submodule init
 git submodule update --recursive
 
 print "Symlinking dotfiles to ${HOME}"
-source $HOME/.homesick/repos/homeshick/homeshick.sh
 homeshick link
 
 # setup Neovim python venvs
@@ -40,7 +41,7 @@ print "Installing plug.vim"
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 print "Installing vim plugins"
-vim -c "PlugInstall"
+nvim -c "PlugInstall"
 
 # set private key permissions
 chmod 0600 $HOME/.ssh/id_rsa
