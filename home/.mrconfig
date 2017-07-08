@@ -1,24 +1,24 @@
 
 [.homesick/repos/citadel]
-checkout = git clone 'git@github.com:feynmanliang/citadel.git' 'citadel'
+checkout = git clone 'https://github.com/feynmanliang/citadel' 'citadel'
 
 [.homesick/repos/desktop-castle]
-checkout = git clone 'git@github.com:feynmanliang/desktop-castle.git' 'desktop-castle'
+checkout = git clone 'https://github.com/feynmanliang/desktop-castle' 'desktop-castle'
 
 [.homesick/repos/git-castle]
-checkout = git clone 'git@github.com:feynmanliang/git-castle.git' 'git-castle'
+checkout = git clone 'https://github.com/feynmanliang/git-castle' 'git-castle'
 
 [.homesick/repos/other-castle]
-checkout = git clone 'git@github.com:feynmanliang/other-castle.git' 'other-castle'
+checkout = git clone 'https://github.com/feynmanliang/other-castle' 'other-castle'
 
 [.homesick/repos/tmux-castle]
-checkout = git clone 'git@github.com:feynmanliang/tmux-castle.git' 'tmux-castle'
+checkout = git clone 'https://github.com/feynmanliang/tmux-castle' 'tmux-castle'
 
 [.homesick/repos/urxvt-X11-castle]
-checkout = git clone 'git@github.com:feynmanliang/urxvt-X11-castle.git' 'urxvt-X11-castle'
+checkout = git clone 'https://github.com/feynmanliang/urxvt-X11-castle' 'urxvt-X11-castle'
 
 [.homesick/repos/vim-castle]
-checkout = git clone 'git@github.com:feynmanliang/vim-castle.git' 'vim-castle'
+checkout = git clone 'https://github.com/feynmanliang/vim-castle' 'vim-castle'
 
 [.homesick/repos/zsh-castle]
-checkout = git clone 'git@github.com:feynmanliang/zsh-castle.git' 'zsh-castle'
+checkout = git clone 'https://github.com/feynmanliang/zsh-castle' 'zsh-castle'
