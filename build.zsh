@@ -2,8 +2,8 @@
 
 # builds the citadel and castles
 git clone https://github.com/andsens/homeshick $HOME/.homesick/repos/homeshick
-git clone https://git.joeyh.name/git/myrepos.git/ $HOME/.homesick/repos/myrepos
-git clone https://github.com/feynmanliang/citadel  $HOME/.homesick/repos/citadel
+git clone git://myrepos.branchable.com/ $HOME/.homesick/repos/myrepos
+mv ${0:a:h} $HOME/.homesick/repos/citadel
 
 print "Checking out kingdom to ~/.homesick/repos/"
 source $HOME/.homesick/repos/homeshick/homeshick.sh
@@ -22,10 +22,16 @@ git submodule update --recursive
 print "Symlinking dotfiles to ${HOME}"
 homeshick link
 
+# install pyenv
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+export PATH=$HOME/.pyenv/bin:$PATH
+eval $(pyenv init -)
+eval $(pyenv virtualenv-init -)
+
 # setup Neovim python venvs
 pyenv install 2.7.13
 pyenv install 3.6.1
-pyenv virtualenv 2.7.11 neovim2
+pyenv virtualenv 2.7.13 neovim2
 pyenv virtualenv 3.6.1 neovim3
 pyenv activate neovim2
 pip install neovim
@@ -33,8 +39,6 @@ pyenv which python  # Note the path
 pyenv activate neovim3
 pip install neovim
 pyenv which python  # Note the path
-# pip install flake8
-# ln -s `pyenv which flake8` ~/bin/flake8  # Assumes that $HOME/bin is in $PATH
 
 # install vim plugins
 print "Installing plug.vim"
@@ -45,6 +49,9 @@ nvim +PlugInstall +qall
 
 # set private key permissions
 chmod 0600 $HOME/.ssh/id_rsa
+
+# rbenv
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 
 print "The kingdom was successfully built."
 print "Citadel now lives in ~/.homeshick/repos/citadel. This directory may now be deleted"
