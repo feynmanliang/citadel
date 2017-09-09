@@ -1,6 +1,12 @@
 # Citadel
 Sets up all the `homeshick` castles. Depends on:
  * `git`
- * `bash`
+ * `zsh`
+ * `curl`
 
-Optional: Add `secret-castle` to `mr` if needed.
+Optional:
+
+ * `neovim`
+ * `tmux`
+
+Add `secret-castle` to `mr` if needed.
