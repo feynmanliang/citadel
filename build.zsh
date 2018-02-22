@@ -15,9 +15,6 @@ print "Cloning submodules"
 cd $HOME
 $HOME/.homesick/repos/myrepos/mr run git submodule init
 $HOME/.homesick/repos/myrepos/mr run git submodule update --recursive
-cd $HOME/.homesick/repos/zsh-castle/home/.zprezto/
-git submodule init
-git submodule update --recursive
 
 print "Symlinking dotfiles to ${HOME}"
 homeshick link
@@ -33,9 +30,9 @@ eval $(pyenv virtualenv-init -)
 
 # setup Neovim python venvs
 pyenv install 2.7.14
-pyenv install 3.6.2
+pyenv install 3.6.4
 pyenv virtualenv 2.7.14 neovim2
-pyenv virtualenv 3.6.2 neovim3
+pyenv virtualenv 3.6.4 neovim3
 pyenv activate neovim2
 pip install neovim
 pyenv which python  # Note the path
