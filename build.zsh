@@ -1,32 +1,32 @@
 #!/usr/bin/env zsh
 
-# builds the citadel and castles
-git clone https://github.com/andsens/homeshick $HOME/.homesick/repos/homeshick
-git clone git://myrepos.branchable.com/ $HOME/.homesick/repos/myrepos
-mv ${0:a:h} $HOME/.homesick/repos/citadel
-
-print "Checking out kingdom to ~/.homesick/repos/"
-source $HOME/.homesick/repos/homeshick/homeshick.sh
-homeshick link
-cd $HOME
-$HOME/.homesick/repos/myrepos/mr checkout
-
-print "Cloning submodules"
-cd $HOME
-$HOME/.homesick/repos/myrepos/mr run git submodule init
-$HOME/.homesick/repos/myrepos/mr run git submodule update --recursive
-
-print "Symlinking dotfiles to ${HOME}"
-homeshick link
-
-# rbenv
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-
-# install pyenv
-curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+# # builds the citadel and castles
+# git clone https://github.com/andsens/homeshick $HOME/.homesick/repos/homeshick
+# git clone git://myrepos.branchable.com/ $HOME/.homesick/repos/myrepos
+# mv ${0:a:h} $HOME/.homesick/repos/citadel
+# 
+# print "Checking out kingdom to ~/.homesick/repos/"
+# source $HOME/.homesick/repos/homeshick/homeshick.sh
+# homeshick link
+# cd $HOME
+# $HOME/.homesick/repos/myrepos/mr checkout
+# 
+# print "Cloning submodules"
+# cd $HOME
+# $HOME/.homesick/repos/myrepos/mr run git submodule init
+# $HOME/.homesick/repos/myrepos/mr run git submodule update --recursive
+# 
+# print "Symlinking dotfiles to ${HOME}"
+# homeshick link
+# 
+# # rbenv
+# curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+# 
+# # install pyenv
+# curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 export PATH=$HOME/.pyenv/bin:$PATH
-eval $(pyenv init -)
-eval $(pyenv virtualenv-init -)
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # setup Neovim python venvs
 pyenv install 2.7.14
