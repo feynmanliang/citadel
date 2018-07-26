@@ -8,6 +8,9 @@ checkout = git clone 'ssh://git@github.com/feynmanliang/desktop-castle' 'desktop
 [.homesick/repos/git-castle]
 checkout = git clone 'ssh://git@github.com/feynmanliang/git-castle' 'git-castle'
 
+[.homesick/repos/gpg-castle]
+checkout = git clone 'ssh://git@github.com/feynmanliang/gpg-castle' 'gpg-castle'
+
 [.homesick/repos/other-castle]
 checkout = git clone 'ssh://git@github.com/feynmanliang/other-castle' 'other-castle'
 
