@@ -33,10 +33,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # setup Neovim python venvs
-pyenv install 2.7.14
-pyenv install 3.6.4
-pyenv virtualenv 2.7.14 neovim2
-pyenv virtualenv 3.6.4 neovim3
+pyenv install 2.7.15
+pyenv install 3.6.6
+pyenv virtualenv 2.7.15 neovim2
+pyenv virtualenv 3.6.6 neovim3
 pyenv activate neovim2
 pip install neovim
 pyenv which python  # Note the path
