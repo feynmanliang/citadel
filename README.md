@@ -16,6 +16,7 @@ For `python`/`pyenv`
  * `bz2`
  * `sqlite3`
  * `openssl`
+ * `libffi` (for python3.7)
  
 For `zplug`
  * `gawk`
